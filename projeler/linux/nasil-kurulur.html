@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="../../images.jpg">
+    <title>Linux Nasıl Kurulur? - NeuraX</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .guide-header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../../neuraxlinux.png') center/cover no-repeat;
+            color: white;
+            padding: 4rem 1rem 3rem;
+            text-align: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 400px;
+            border-radius: 0;
+            margin: 0;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .guide-header img {
+            max-width: 200px;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .guide-content {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        
+        .guide-section {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .step {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .step:last-child {
+            border-bottom: none;
+        }
+        
+        .step-number {
+            background: #1a73e8;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+        
+        .penguin {
+            width: 120px;
+            margin: 1rem 0;
+            opacity: 0.8;
+        }
+        
+        @media (min-width: 768px) {
+            .guide-header {
+                padding: 6rem 2rem 4rem;
+            }
+            
+            .guide-content {
+                padding: 0 2rem;
+            }
+            
+            .guide-section {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="../../index.html" class="logo-container">
+                        <img src="images.jpg" alt="NeuraX Studios Logo" class="logo-image">
+                        <span class="logo-text">NeuraX <span>Studios</span></span>
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="../../index.html">Ana Sayfa</a>
+                    <a href="../../projeler.html" class="active">Projeler</a>
+                    <a href="../../hakkimizda.html">Hakkımızda</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="guide-header">
+            <img src="https://assets.techrepublic.com/uploads/2021/08/tux-new.jpg" alt="Linux Tux Pengueni" class="penguin-image">
+            <h1>Linux Kurulum Rehberi</h1>
+            <p>NeuraxOS Linux'u bilgisayarınıza kurmak için adım adım rehber</p>
+        </div>
+
+        <div class="guide-content">
+            <div class="guide-section">
+                <h2><i class="fas fa-download"></i> Kurulum Adımları</h2>
+                
+                <div class="step">
+                    <div><span class="step-number">1</span> <strong>İndirme İşlemi</strong></div>
+                    <p>NeuraxOS Linux ISO dosyasını resmi web sitemizden indirin. İndirme işlemi tamamlandığında, ISO dosyasının bütünlüğünü doğrulamak için SHA256 kontrolü yapın.</p>
+                </div>
+                
+                <div class="step">
+                    <div><span class="step-number">2</span> <strong>Boot Edilebilir USB Oluşturma</strong></div>
+                    <p>İndirdiğiniz ISO dosyasını bir USB belleğe yazdırın. Bunun için Rufus veya Etcher gibi araçları kullanabilirsiniz.</p>
+                </div>
+                
+                <div class="step">
+                    <div><span class="step-number">3</span> <strong>Bilgisayarı USB'den Başlatma</strong></div>
+                    <p>USB belleği bilgisayarınıza takın ve bilgisayarınızı USB'den başlatın. Bu işlem genellikle BIOS/UEFI ayarlarından yapılır.</p>
+                </div>
+                
+                <div class="step">
+                    <div><span class="step-number">4</span> <strong>Kurulum Sihirbazını Başlatma</strong></div>
+                    <p>NeuraxOS Linux kurulum sihirbazı başlayacaktır. Ekrandaki talimatları izleyerek kurulumu tamamlayın.</p>
+                </div>
+                
+                <div class="step">
+                    <div><span class="step-number">5</span> <strong>Sistem Güncellemeleri</strong></div>
+                    <p>Kurulum tamamlandıktan sonra, sistem güncellemelerini kontrol edin ve gerekli güncellemeleri yapın.</p>
+                </div>
+            </div>
+            
+            <div class="guide-section">
+                <h2><i class="fas fa-exclamation-triangle"></i> Önemli Notlar</h2>
+                <ul>
+                    <li>Kurulum öncesi tüm önemli verilerinizi yedekleyin.</li>
+                    <li>Dizüstü bilgisayar kullanıyorsanız, güç bağlantısının olduğundan emin olun.</li>
+                    <li>Kurulum sırasında internet bağlantınızın stabil olduğundan emin olun.</li>
+                </ul>
+            </div>
+        </div>
+    </main>
+
+    <footer id="iletisim">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>NeuraX Studios</h3>
+                <p>Teknoloji ve güvenlik çözümlerinde yeni nesil yaklaşım. Yenilikçi fikirler ve güvenilir yazılımlar ile geleceği şekillendiriyoruz.</p>
+                <div class="instagram-link">
+                    <a href="https://www.instagram.com/neuraxstudios" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i> @neuraxstudios
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>İletişim</h3>
+                <p><i class="fab fa-instagram"></i> @neuraxstudios</p>
+                <p><i class="fab fa-whatsapp"></i> +1 (365) 415-7311</p>
+                <p><i class="fas fa-envelope"></i> info@neuraxstudios.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Hızlı Bağlantılar</h3>
+                <a href="../../index.html"><i class="fas fa-chevron-right"></i> Ana Sayfa</a>
+                <a href="../../projeler.html"><i class="fas fa-chevron-right"></i> Projeler</a>
+                <a href="../../hakkimizda.html"><i class="fas fa-chevron-right"></i> Hakkımızda</a>
+                <a href="#"><i class="fas fa-chevron-right"></i> Blog</a>
+                <a href="#"><i class="fas fa-chevron-right"></i> İletişim</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Bülten Aboneliği</h3>
+                <p>Yeniliklerden haberdar olmak için e-posta listemize kaydolun.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="E-posta adresiniz" required>
+                    <button type="submit" class="btn">Abone Ol</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 NeuraX Studios. Tüm hakları saklıdır. | <a href="#">Gizlilik Politikası</a> | <a href="#">Kullanım Şartları</a></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

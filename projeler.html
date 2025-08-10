@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/jpg" href="images.jpg">
+    <title>Projeler - Neurax</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://st2.depositphotos.com/2702639/10537/i/450/depositphotos_105373622-stock-photo-lines-of-code-on-computer.jpg') no-repeat center center;
+            background-size: cover;
+            filter: blur(2px);
+            z-index: -1;
+            opacity: 0.7;
+        }
+
+        .projects-header {
+            background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%);
+            color: white;
+            padding: 6rem 2rem 4rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+        
+        .project-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            transform: translateY(0);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-15px) scale(1.03);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+            background: #ffffff;
+        }
+        
+        .project-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(96, 165, 250, 0.1));
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: -1;
+        }
+        
+        .project-card:hover::before {
+            opacity: 1;
+        }
+        
+        .project-image {
+            height: 220px;
+            width: 100%;
+            background: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding: 1rem;
+        }
+        
+        .project-card:hover .project-image {
+            transform: scale(1.03);
+        }
+        
+        .project-image img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+        
+        .project-content {
+            padding: 2rem;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .project-status {
+            display: inline-block;
+            background: linear-gradient(90deg, #3b82f6, #60a5fa);
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin-bottom: 1.2rem;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover .project-status {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <a href="index.html" class="logo-container">
+                        <img src="images.jpg" alt="NeuraX Studios Logo" class="logo-image">
+                        <span class="logo-text">NeuraX <span>Studios</span></span>
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <a href="index.html">Ana Sayfa</a>
+                    <a href="projeler.html" class="active">Projeler</a>
+                    <a href="hakkimizda.html">Hakkımızda</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="projects-header">
+            <h1>NeuraxOS Projeleri</h1>
+            <p>Geliştirdiğimiz tüm projeleri keşfedin</p>
+        </section>
+
+        <div class="projects-grid">
+            <!-- NeuraxOS Windows -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="windowsneurax.png" alt="NeuraxOS Windows" style="width: 100%; height: 100%; object-fit: contain; padding: 1rem;">
+                </div>
+                <div class="project-content">
+                    <span class="project-status">BETA</span>
+                    <h2>NeuraxOS Windows</h2>
+                    <p>Windows'u hafifleten, mahremiyeti artıran ve performansı en üst seviyeye çıkaran özelleştirilmiş bir deneyim.</p>
+                    <a href="projeler/neuraxos-windows.html">Detayları Görüntüle →</a>
+                </div>
+            </div>
+
+            <!-- NeuraxOS Linux -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="neuraxlinux.png" alt="NeuraxOS Linux" style="width: 100%; height: 100%; object-fit: contain; padding: 1rem;">
+                </div>
+                <div class="project-content">
+                    <span class="project-status">Geliştiriliyor</span>
+                    <h2>NeuraxOS Linux</h2>
+                    <p>Kali Linux tabanlı, özelleştirilmiş Linux dağıtımı. Güvenlik ve performans odaklı.</p>
+                    <a href="#">Çok Yakında</a>
+                </div>
+            </div>
+
+            <!-- NeuraX Android Privacy -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="neuraxandroidprivacy.png" alt="NeuraX Android Privacy" class="project-image">
+                </div>
+                <div class="project-content">
+                    <span class="project-status">Geliştiriliyor</span>
+                    <h2>NeuraX Android Privacy</h2>
+                    <p>Mobil cihazlarda veri toplamayı engelleyen son derece güvenli ve hafif bir uygulama.</p>
+                    <a href="#">Yakında</a>
+                </div>
+            </div>
+
+            <!-- The Night Shift -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="thenightsnift.png" alt="The Night Shift" class="project-image">
+                </div>
+                <div class="project-content">
+                    <span class="project-status">Geliştiriliyor</span>
+                    <h2>The Night Shift</h2>
+                    <p>Sizi adeta sürükleyecek, hikayesinin her kısmı meraklandıran, heyecanlı bir 2D Piksel Maskot Korku Gerilim Oyunu.</p>
+                    <a href="#">Çok Yakında</a>
+                </div>
+            </div>
+
+            <!-- Neurax Antivirus -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="neuraxantivus.png" alt="Neurax Antivirus" class="project-image">
+                </div>
+                <div class="project-content">
+                    <span class="project-status">Yakında</span>
+                    <h2>Neurax Antivirus</h2>
+                    <p>Güçlü ve hafif bir antivirüs çözümü. Optimizeye önem veren şon derece güvenlik kapsamlı.</p>
+                    <a href="#">Yakında</a>
+                </div>
+            </div>
+
+            <!-- Revenge -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="revenge.png" alt="Revenge" class="project-image">
+                </div>
+                <div class="project-content">
+                    <span class="project-status">Geliştiriliyor</span>
+                    <h2>The Revenge of Vengeful Spirits</h2>
+                    <p>Sizi adeta sürükleyecek, hikayesinin her kısmı meraklandıran, heyecanlı bir 2D Piksel Maskot Korku Gerilim Oyunu.</p>
+                    <a href="#">Yakında</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer id="iletisim">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>NeuraX Studios</h3>
+                <p>Teknoloji ve güvenlik çözümlerinde yeni nesil yaklaşım. Yenilikçi fikirler ve güvenilir yazılımlar ile geleceği şekillendiriyoruz.</p>
+                <div class="instagram-link">
+                    <a href="https://www.instagram.com/neuraxstudios" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i> @neuraxstudios
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-section">
+                <h3>İletişim</h3>
+                <p><i class="fab fa-instagram"></i> @neuraxstudios</p>
+                <p><i class="fab fa-whatsapp"></i> +1 (365) 415-7311</p>
+                <p><i class="fas fa-envelope"></i> info@neuraxstudios.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Hızlı Bağlantılar</h3>
+                <a href="index.html"><i class="fas fa-chevron-right"></i> Ana Sayfa</a>
+                <a href="projeler.html"><i class="fas fa-chevron-right"></i> Projeler</a>
+                <a href="hakkimizda.html"><i class="fas fa-chevron-right"></i> Hakkımızda</a>
+                <a href="#"><i class="fas fa-chevron-right"></i> Blog</a>
+                <a href="#"><i class="fas fa-chevron-right"></i> İletişim</a>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Bülten Aboneliği</h3>
+                <p>Yeniliklerden haberdar olmak için e-posta listemize kaydolun.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="E-posta adresiniz" required>
+                    <button type="submit" class="btn">Abone Ol</button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 NeuraX Studios. Tüm hakları saklıdır. | <a href="#">Gizlilik Politikası</a> | <a href="#">Kullanım Şartları</a></p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
